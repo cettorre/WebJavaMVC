@@ -3,7 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:o="http://omnifaces.org/ui"
+      xmlns:of="http://omnifaces.org/functions">
 
     <body>
 
@@ -15,6 +17,35 @@
 
             <ui:define name="left">
                 <a href="login.jsp">Administrator login</a>
+           <!--<o:resourceInclude path="WEB-INF/jspf/loginform.jspf" /> -->
+            <form action="j_security_check" method="POST">
+            <table border="0" cellspacion="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <td>Nombre usuario:</td>
+                        <td>
+                            <input type="text" name="j_username"></input>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <input type="password" name="j_password"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Login"></input>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+        </form>
             </ui:define>
 
             <ui:define name="content">

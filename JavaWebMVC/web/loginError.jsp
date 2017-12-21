@@ -13,5 +13,6 @@
     </head>
     <body>
         <h1>Error try again</h1>
+        <%@include file="WEB-INF/jspf/loginform.jspf" %>
     </body>
 </html>
